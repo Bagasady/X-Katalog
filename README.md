@@ -1,2 +1,0 @@
-# X-Katalog
-X- Katalog
