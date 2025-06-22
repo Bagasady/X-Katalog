@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animasi glow untuk X-Katalog di navbar */
+@keyframes xkatalog-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 8px #ffe066, 0 0 16px #ffe06644;
+  }
+  50% {
+    text-shadow: 0 0 24px #ffe066, 0 0 48px #ffe06688;
+  }
+}
+.animate-xkatalog-glow {
+  animation: xkatalog-glow 2s infinite alternate;
+}
+
+/* Animasi fade-in dan slide-up untuk hero */
+@keyframes hero-title-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-hero-title {
+  animation: hero-title-fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes hero-desc-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-hero-desc {
+  animation: hero-desc-fade-in 1.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Animasi global untuk seluruh front end */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-up {
+  animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.scale-in {
+  animation: scale-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Transisi hover universal untuk button, card, link */
+.smooth-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.smooth-hover:hover {
+  filter: brightness(1.08) drop-shadow(0 2px 8px #ffe06644);
+  transform: translateY(-2px) scale(1.03);
+}
+
+html {
+  scroll-behavior: smooth;
+}
